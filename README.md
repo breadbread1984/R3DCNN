@@ -12,7 +12,7 @@ python create_dataset.py
 ```
 
 ### how to train
-train with command
+place the trained C3D model directory under current directory and train with command
 
 ```bash
 python train_r3dcnn.py
