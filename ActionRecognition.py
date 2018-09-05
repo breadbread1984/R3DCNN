@@ -28,7 +28,7 @@ class ActionRecognition:
 		features = features.reshape(1,10,8,112,112,3).astype(np.float32)
 		input_fn = lambda:{'data':tf.convert_to_tensor(features),'sequence_lengths':tf.convert_to_tensor(self.sequence_lengths)};
 		predictions = self.gesture_classifier.predict(input_fn);
-		prediction = predictions.next();
+		prediction = next(predictions);
 		return prediction;
 
 if __name__ == "__main__":
